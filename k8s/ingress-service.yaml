@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations:
+    #create a ingress controller based on the ingress-nginx project
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+    #How the copy of nginx gonna behave
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    # - host: fib.dev
+    - http:
+        paths:
+          - path: /client
+            backend:
+              serviceName: client-cluster-ip-service
+              servicePort: 3000
+          - path: /api/
+            backend:
+              serviceName: server-cluster-ip-service
+              servicePort: 5000
