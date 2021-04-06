@@ -1,0 +1,20 @@
+{
+  "name": "complex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhomiguel/complex-k8s.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jhomiguel/complex-k8s/issues"
+  },
+  "homepage": "https://github.com/Jhomiguel/complex-k8s#readme"
+}
